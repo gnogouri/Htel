@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet, Alert, Animated } from 'react-native';
+import { View, Text, ScrollView, Image, TouchableOpacity, StyleSheet, Alert, Animated, ImageBackground } from 'react-native';
 import { categories } from '../../Data/datametieracceuilch'; // Importation des données
 import { residences } from '../../Data/datametierresidence'; // Importation des données
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -89,12 +89,16 @@ export default function Accueil() {
                     onPress={() => handleImagePress(image.title)}
                     style={Appstyles.imageWrapper}
                   >
-                    <Image
+                    <ImageBackground
                       style={Appstyles.imageACC}
                       source={image.src}
                       onError={(error) => console.log('Erreur image:', error.nativeEvent.error)}
-                    />
-                    <Text>{image.title}</Text>
+                    >
+                    <View style={styles.badge}>
+                    <Text style={styles.badgeText}>{image.title}</Text>
+                    </View>
+                  
+                    </ImageBackground>
                   </TouchableOpacity>
                 ))}
               </ScrollView>
@@ -117,12 +121,15 @@ export default function Accueil() {
               >
                 {residence.images.map((image) => (
                   <TouchableOpacity key={image.id} onPress={() => handleImagePress(image.title)} style={Appstyles.imageWrapper}>
-                    <Image
+                    <ImageBackground
                       style={Appstyles.imageACC}
                       source={image.src}
                       onError={(error) => console.log('Erreur image:', error.nativeEvent.error)}
-                    />
-                    <Text>{image.title}</Text>
+                    >
+                    <View style={styles.badge}>
+                    <Text style={styles.badgeText}>{image.title}</Text>
+                    </View>
+                    </ImageBackground>
                   </TouchableOpacity>
                 ))}
               </ScrollView>
@@ -149,7 +156,6 @@ export default function Accueil() {
       </TouchableOpacity>
     </View>
       </View>
-     
     </View>
     </ScrollView>
   );
@@ -163,6 +169,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent:'center',
   },
+  badge: {
+    backgroundColor: '#6e2b04', // couleur bleue
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 9999, // pour un effet pill arrondi
+    alignSelf: 'flex-start',
+  },
+  badgeText: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  
   title: {
     color: 'white',
     fontSize: 18,
