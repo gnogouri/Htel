@@ -105,6 +105,19 @@ paddingHorizontal: 10,
     shadowRadius: 3.84,
 
   },
+  resteven:{
+    paddingVertical: 10,
+flexDirection:'row',
+justifyContent: 'space-between',
+  },
+  card: {
+    backgroundColor: '#6e2b04', // Rouge foncé
+    width: 150,
+    padding: 15,
+    borderRadius: 20,
+    alignItems: 'center',
+    margin:10,
+  },
   button1: {
      // Couleur de fond du bouton
     paddingVertical: 12,

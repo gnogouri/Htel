@@ -21,7 +21,7 @@ export default function Accueil() {
    <View style={{alignItems:'center'}}>
    <Text style={{
  marginTop: 50,
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: 'bold',
     fontStyle: 'italic', 
     color: '#faf9f9',
@@ -39,7 +39,7 @@ export default function Accueil() {
     paddingHorizontal: 30,
     overflow: 'hidden', // Cache tout contenu qui dépasse
 }}>
-  BIENVENUE
+  BIENVENUE À HTEL
 </Text>
    </View>
    
@@ -132,6 +132,24 @@ export default function Accueil() {
           <Text>Aucune donnée de résidence trouvée</Text>
         )}
       </View>
+
+      {/* //--------EVENEMENTS ET RESTAURANT-------------- */}
+      <View style={Appstyles.resteven}>
+    
+    <View style={Appstyles.card}>
+      <TouchableOpacity>
+            <MaterialIcons name="local-restaurant" size={24} color="white" />
+            <Text style={styles.cardText}>notre restaurant</Text>
+      </TouchableOpacity>
+    </View>
+    <View style={Appstyles.card}>
+      <TouchableOpacity>
+            <MaterialIcons name="emoji-events" size={24} color="white" />
+            <Text style={styles.cardText}>Espace évènementiel</Text>
+      </TouchableOpacity>
+    </View>
+      </View>
+     
     </View>
     </ScrollView>
   );
