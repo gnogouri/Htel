@@ -145,7 +145,7 @@ export default function Accueil() {
     <View style={Appstyles.card}>
       <TouchableOpacity>
             <MaterialIcons name="emoji-events" size={24} color="white" />
-            <Text style={styles.cardText}>Espace évènementiel</Text>
+            <Text style={styles.cardText}>Espace évènementiel </Text>
       </TouchableOpacity>
     </View>
       </View>
