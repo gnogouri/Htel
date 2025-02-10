@@ -38,7 +38,7 @@ const Acceuil = () => {
         />
 
 <Tab.Screen
-          name="réceptionniste"
+          name="réceptionnist"
           component={Accueil}
           options={{headerShown: false,
             tabBarIcon: ({ color, size }) => (
