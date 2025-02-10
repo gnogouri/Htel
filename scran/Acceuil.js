@@ -11,7 +11,7 @@ const Acceuil = () => {
       <Tab.Navigator
         screenOptions={() => ({
           tabBarIcon: ({ focused, color, size }) => {},
-          tabBarActiveTintColor: '#007bff',
+          tabBarActiveTintColor: '#f1f3f5',
           tabBarInactiveTintColor: 'gray',
           tabBarStyle: { backgroundColor: '#6e2b04' },
         })}
@@ -26,6 +26,28 @@ const Acceuil = () => {
           }}
 
         />
+        <Tab.Screen
+          name="Mes reservations"
+          component={Accueil}
+          options={{headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+              <MaterialIcons name="book" size={size} color={color} />
+            ),
+          }}
+
+        />
+
+<Tab.Screen
+          name="réceptionniste"
+          component={Accueil}
+          options={{headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+              <MaterialIcons name="book" size={size} color={color} />
+            ),
+          }}
+
+        />
+
         <Tab.Screen name="les chambres" component={Accueil} />
       </Tab.Navigator>
  
